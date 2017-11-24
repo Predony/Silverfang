@@ -9,9 +9,10 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 50px;
   padding: 20px;
   color: white;
+  margin-bottom: 10px;
 }
 
 .App-title {
@@ -25,4 +26,200 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+html, body {
+  background-color: rgb(0, 121, 191);
+  height: 100%;
+  overflow-x: hidden;
+  position:relative;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#content {
+  margin-top: 1em;
+}
+
+div.sidebar.list {
+  border: 1px solid #999;
+  padding: 8px 10px;
+  font-weight: bold;
+  border-radius: 3px;
+
+}
+
+#sidebar {
+    height: 100%;
+    width: 180px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 20px;
+    float: left;
+color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+
+.list-wrapper {
+  width: 270px;
+  margin: 0 5px;
+float: left;
+    background: #E2E4E6;
+    border-radius: 3px;
+
+}
+
+.connectedSortable {
+
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    padding: 0px 10px 0px 10px;
+    list-style: none;
+  margin-bottom: 0px;
+  margin-top: 0px;
+
+}
+
+.list-title {
+  padding: 10px;
+  padding-bottom: 7px;
+}
+
+.options{
+  color: #555;
+  font-weight: bold;
+}
+.list-item {
+      background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 6px;
+    max-width: 300px;
+    width: 100%;
+    min-height: 20px;
+    display: table;
+    position: relative;
+    z-index: 0;
+    padding: 5px;
+  color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  font-weight: normal;
+}
+.hidden-state {
+  visibility: hidden;
+}
+select{
+  font-size: 14px;
+  width: 70%;
+  margin-bottom: 5px;
+}
+
+.inline-list {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 2px;
+  float: right;
+  color: #888;
+}
+/*
+* Cards
+*/
+.add-card {
+  height: 34px;
+  padding-top: 6px;
+    border: 1px solid #ccc;
+  border-radius: 22px;
+  padding-left: 13px;
+  font-size: 14px;
+  width: calc(100% - 20px);
+  margin-bottom: 8px;
+  margin-left: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+.txt_fullname{
+  font-size: 1em;
+  width: 100%;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+#sidebar {
+  display: none;
+}
+#search-bar-container {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  #container{
+    width: 100%;
+  }
+  body {
+    margin: 0px;
+  }
+  .list-num1{
+    display: none;
+  }
+  .list-num2{
+    display: none;
+  }
+  #sidebar {
+    display: none
+  }
+  .list-num0{
+    width: 100%;
+    margin: 0px;
+  }
+  ul#sortable0 {
+    padding: 0px;
+    margin-bottom: 8px;
+  }
+  .list-item not(desktop){
+    font-size: 25px;
+  }
+  .list-item {
+    margin: 0px;
+    border-radius: 0px;
+        border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: inline-block;
+   width: 100%;
+    max-width: 100%;
+
+  }
+  select {
+    width: 75%;
+    display: inline-block;
+  }
+  .inline-list {
+    color: #ddd;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  .list-wrapper {
+    background-color: rgb(0, 121, 191);
+  }
+  .add-list {
+    color: #efefef;
+  }
+}
+
+/*
+* Search
+*****************/
+#search-bar-container {
+  width: 100%;
+  padding: 10px;
 }
