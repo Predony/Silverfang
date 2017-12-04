@@ -1,3 +1,32 @@
+.ClassLoginForm {
+	margin: 200px;
+	left: 25%;
+	border: 3px solid #FFB273;
+	margin-bottom: 24px;
+	background-color: #5CCCCC;
+	width: 200px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	position: relative;
+}
+
+.ClassUserName{
+	margin: 5px;
+	position: relative;
+}
+
+.ClassPassword{
+	margin: 5px;
+	position: relative;
+}
+
+.ClassLoginButton{
+	margin: 5px;
+	position: relative;
+}
+
 .add-note {
 	/*background-color: red;*/
   background-color: #fdfdfd;

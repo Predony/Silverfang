@@ -1,10 +1,10 @@
 import React from 'react';
-import Greeting from './Greeting';
+import LoginForm from './LoginForm';
 import './App.css';
 
 class App extends React.Component {
 	render() {
-		return (<Greeting/>);
+		return (<LoginForm/>);
 	}
 }
 export default App
