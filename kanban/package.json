@@ -8,6 +8,7 @@
     "alt-utils": "^2.0.0",
     "classnames": "^2.2.5",
     "hawk": "^7.0.5",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-addons-perf": "^15.4.2",
     "react-beautiful-dnd": "^2.6.4",
