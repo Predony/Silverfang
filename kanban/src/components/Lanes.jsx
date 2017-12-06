@@ -6,7 +6,7 @@ import uuid from 'uuid';
 const {array} = PropTypes;
 
 const propTypes = {
-	lanes: array.isRequired
+	lanes: array
 }
 
 const defaultProps = {
@@ -33,7 +33,7 @@ const defaultProps = {
 class Lanes extends React.Component {
 	render() {
 		const lanes = this.props.title.map(title => (
-			<Lane title={title.name}/>));
+			<Lane key={title.id} title={title.name}/>));
 			return (
 		      <div className="lanes">
 		        {lanes}

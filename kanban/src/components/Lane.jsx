@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const {string} = PropTypes;
 const propTypes = {
-	title: string.isRequired
+	title: string
 };
 
 const defaultProps = {
@@ -26,7 +26,7 @@ const Lane = ({title}) => {
 	</div>);
 }
 
-// Lane.propTypes = propTypes;
+Lane.propTypes = propTypes;
 Lane.defaultProps = defaultProps;
 
 export default Lane

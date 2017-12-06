@@ -5,20 +5,54 @@
     justify-content: center;
 }
 
-/*button {
-  background-color: gray;
-  border: 0;
-  border-radius: 2px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
-  color: #fff;
-  padding: .5em 1em;
-  transition: all .3s ease-out;
+.lane {
+  border: 1px solid #d3d3d3;
+  border-radius: 1px;
+  flex-grow: 1;
+  margin-top: 1.5em;
+  max-width: 15em;
+  min-width: 12.5em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.lane__name {
+  border-bottom: 1px solid lightgrey;
+  font-weight: 400;
+  padding: .5em;
+  padding-left: .5em;
+  text-align: left;
+
 }
 
-button:focus {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
-  outline: 0;
-}*/
+.lane__delete {
+  background-color: $white;
+  border: 1px solid #d3d3d3;
+  box-shadow: none;
+  color: darkgrey;
+  height: 1em;
+  line-height: 1em;
+  padding: 0;
+  position: absolute;
+  right: .5em;
+  top: -.5em;
+  width: 1em;
+}
+
+.add-note {
+  background-color: accent-sec;
+  height: 2em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding: 0 1em;
+
+}
+.add-note:hover {
+	background-color: red;
+}
+
+
 
 .ClassLoginForm {
     margin: 200px;
