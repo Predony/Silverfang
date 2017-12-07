@@ -1,17 +1,32 @@
 import React from 'react';
 import Note from './Note';
 import Editable from './Editable';
+import PropTypes from 'prop-types';
 
-export default({
-	notes,
-	onNoteClick = () => {},
-	onEdit = () => {},
-	onDelete = () => {}
-}) => (<ul className="notes">{
-		notes.map(({id, editing, task}) => <li key={id}>
-			<Note className="note" onClick={onNoteClick.bind(null, id)}>
-				<Editable className="editable" editing={editing} value={task} onEdit={onEdit.bind(null, id)}/>
-				<button className="delete" onClick={onDelete.bind(null, id)}>x</button>
-			</Note>
-		</li>)
-	}</ul>)
+const {object} = PropTypes;
+
+const propTypes = {
+    notes: object,
+};
+
+class Notes extends React.Component {
+    render() {
+        const {notes} = this.props;
+        return;
+        <div>
+            {notes.map(note => (
+                <Note
+                    id={note.id}
+                    key={note.id}
+                    onMoveNote={this.props.onMoveNote}
+                />
+            ))}
+        </div>;
+
+        return <ul className="notes-list">{notes}</ul>;
+    }
+}
+
+Notes.propTypes = propTypes;
+
+export default Notes;

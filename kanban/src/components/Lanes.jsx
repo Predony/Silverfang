@@ -10,9 +10,24 @@ const propTypes = {
 };
 
 class Lanes extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            title: props.title,
+        };
+    }
+    addNote(c) {
+        console.log(`Füge eine Karte hinzu bei: ${c.name}`);
+    }
     render() {
-        const lanes = this.props.title.title.map(title => (
-            <Lane key={title.id} title={title.name} />
+        const lanes = this.state.title.title.map(title => (
+            <Lane
+                key={title.id}
+                title={title.name}
+                onClickHandler={() => this.addNote(title)}
+                {...title}
+            />
         ));
         return <div className="lanes">{lanes}</div>;
     }

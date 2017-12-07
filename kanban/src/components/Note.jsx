@@ -1,7 +1,7 @@
 import React from 'react';
 
-// export default ({children, ...props}) => (
-//   <div {...props}>
-//     {children}
-//   </div>
-// );
+export default class Note extends React.Component {
+    render() {
+        return <input type="text" className="editing" />;
+    }
+}
