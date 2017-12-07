@@ -6,60 +6,74 @@
 }
 
 .lane {
-  border: 1px solid #d3d3d3;
-  border-radius: 1px;
-  flex-grow: 1;
-  margin-top: 1.5em;
-  max-width: 15em;
-  min-width: 12.5em;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  }
+    border: 1px solid #d3d3d3;
+    border-radius: 1px;
+    flex-grow: 1;
+    margin-top: 1.5em;
+    max-width: 15em;
+    min-width: 12.5em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .lane__name {
-  border-bottom: 1px solid lightgrey;
-  font-weight: 400;
-  padding: .5em;
-  padding-left: .5em;
-  text-align: left;
-
+    border-bottom: 1px solid lightgrey;
+    font-weight: 400;
+    padding: 0.5em;
+    padding-left: 0.5em;
+    text-align: left;
 }
 
 .lane__delete {
-  background-color: $white;
-  border: 1px solid #d3d3d3;
-  box-shadow: none;
-  color: darkgrey;
-  height: 1em;
-  line-height: 1em;
-  padding: 0;
-  position: absolute;
-  right: .5em;
-  top: -.5em;
-  width: 1em;
+    background-color: $white;
+    border: 1px solid #d3d3d3;
+    box-shadow: none;
+    color: darkgrey;
+    height: 1em;
+    line-height: 1em;
+    padding: 0;
+    position: absolute;
+    right: 0.5em;
+    top: -0.5em;
+    width: 1em;
 }
 
 .add-note {
-  background-color: accent-sec;
-  height: 2em;
-  margin-bottom: 1em;
-  margin-left: 1em;
-  padding: 0 1em;
-
+    background-color: #fdfdfd;
+    height: 2em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    padding: 0 1em;
 }
 .add-note:hover {
-	background-color: red;
+    background-color: red;
 }
 
-
+.Header {
+    margin: 0 0 20px 0;
+    height: 46px;
+    padding: 14px 14px 0 14px;
+    color: white;
+    background-color: #a60000;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+/*.add-note {
+	background-color: #fdfdfd;
+	border: 1px solid #ccc;
+}*/
 
 .ClassLoginForm {
     margin: 200px;
     left: 25%;
-    border: 3px solid #FFB273;
+    border: 3px solid #ffb273;
     margin-bottom: 24px;
-    background-color: #5CCCCC;
+    background-color: #5ccccc;
     width: 200px;
     border-radius: 10px;
     -moz-border-radius: 10px;
@@ -83,13 +97,6 @@
     position: relative;
 }
 
-.add-note {
-    /*background-color: red;*/
-    background-color: #fdfdfd;
-
-    border: 1px solid #ccc;
-}
-
 .notes {
     margin: 0.5em;
     padding-left: 0;
@@ -105,13 +112,13 @@
     padding: 0.5em;
 
     background-color: #fdfdfd;
-    box-shadow: 0 0 0.3em .03em rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0.3em 0.03em rgba(0, 0, 0, 0.3);
 }
 
 .note:hover {
-    box-shadow: 0 0 0.3em .03em rgba(0, 0, 0, .7);
+    box-shadow: 0 0 0.3em 0.03em rgba(0, 0, 0, 0.7);
 
-    transition: .6s;
+    transition: 0.6s;
 }
 
 .note .value {

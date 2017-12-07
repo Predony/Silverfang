@@ -29,9 +29,3 @@ h1,h2,h3,h4,h5, .title {
 #app, .app {
     height: 100%;
 }
-
-.add-note {
-  background-color: #fdfdfd;
-
-  border: 1px solid #ccc;
-}
