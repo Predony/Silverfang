@@ -1,42 +1,57 @@
-import React from 'react';
-import classnames from 'classnames';
+import React, {PureComponent} from 'react';
 
-export default({
-	editing,
-	value,
-	onEdit,
-	className,
-	...props
-}) => {
-	if (editing) {
-		return <Edit className={className} value={value} onEdit={onEdit} {...props}/>;
-	}
-	return <span className={classnames('value', className)} {...props}>
-		{value}
-	</span>;
-}
+export default class Editable extends PureComponent {
+    render() {
+        const {value, onEdit, onValueClick, editing, className} = this.props;
 
-class Edit extends React.Component {
-	render() {
-		const {
-			className,
-			value,
-			onEdit,
-			...props
-		} = this.props;
+        return (
+            <div className={className}>
+                {editing ? this.renderEdit() : this.renderValue()}
+            </div>
+        );
+    }
+    renderEdit = () => {
+        return (
+            <input
+                type="text"
+                placeholder="neue Karte"
+                ref={e =>
+                    e ? (e.selectionStart = this.props.value.length) : null
+                }
+                autoFocus={true}
+                defaultValue={this.props.value}
+                onBlur={this.finishEdit}
+                onKeyPress={this.checkEnter}
+            />
+        );
+    };
+    renderValue = () => {
+        const onDelete = this.props.onDelete;
 
-		return <input type="text" className={classnames('edit', className)} autoFocus={true} defaultValue={value} onBlur={this.finishEdit} onKeyPress={this.checkEnter} {...props}/>;
-	}
-	checkEnter = (e) => {
-		if (e.key === 'Enter') {
-			this.finishEdit(e);
-		}
-	}
-	finishEdit = (e) => {
-		const value = e.target.value;
+        return (
+            <div onClick={this.props.onValueClick}>
+                <span className="value">{this.props.value}</span>
+                {onDelete ? this.renderDelete() : null}
+            </div>
+        );
+    };
+    renderDelete = () => {
+        return (
+            <button className="delete" onClick={this.props.onDelete}>
+                x
+            </button>
+        );
+    };
+    checkEnter = e => {
+        if (e.key === 'Enter') {
+            this.finishEdit(e);
+        }
+    };
+    finishEdit = e => {
+        const value = e.target.value;
 
-		if (this.props.onEdit) {
-			this.props.onEdit(value);
-		}
-	}
+        if (this.props.onEdit && value.trim()) {
+            this.props.onEdit(value);
+        }
+    };
 }
